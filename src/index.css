@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,500;1,300;1,400;1,500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+   background:#09162e;
+   font-family: "Inter",sans-serif;
+  }
+  .app-container{
+    @apply w-[85vw] xl:w-[95vw] m-auto;
+  }
+
+   /* buttons */
+   .button-blue {
+    @apply bg-gradient-to-b from-blue-600 to-indigo-600 shadow-sm shadow-blue-500 rounded-xl text-sm px-4 py-1.5 transition-all duration-200 active:scale-90 text-white hover:scale-105 ease-in-out ;
+  }  
+  .button-light {
+    @apply bg-slate-300/10 bg-opacity-70 shadow-sm shadow-slate-300/10 rounded-xl text-sm px-4 py-1.5 transition-all duration-200 active:scale-90 text-white hover:scale-105 ease-in-out;
+  }   
+  .box-light{
+    @apply opacity-70  rounded-xl  px-9 py-1.5  shadow-2xl bg-slate-300/5 active:scale-90 transition-all duration-300 hover:scale-105 ease-in-out;
+  }
+  .display-none{
+    @apply inline-block  bg-transparent
+  }
+  .nav-default {
+    @apply flex items-center justify-center fixed top-5 lg:top-3 left-0 right-0 transition-all duration-300;
+  }
+  .nav-sticky{
+    @apply bg-blue-800 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 flex items-center h-[9vh] fixed top-0 left-0 right-0 opacity-100 z-[100] shadow-sm shadow-blue-800;
+  }
+}
